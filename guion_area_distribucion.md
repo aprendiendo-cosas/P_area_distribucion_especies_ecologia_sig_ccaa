@@ -25,7 +25,7 @@ Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo
 
   - Reproyecto la capa (que viene en WGS84) al EPSG 23030.
   - Añado campos *coord_x* y *coord_y* con las coordenadas correspondientes en EPSG 20300. Uso la calculadora de campos con *$X* y *$Y*.
-  - Selecciono los puntos de GBIF que caen dentro de [esta](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/parque_sierra_nevada.zip) (*parque_sierra_nevada.shp*) capa que representa el espacio protegido de Sierra Nevada. 
+  - Selecciono los puntos de GBIF que caen dentro de [esta](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/parque_sierra_nevada.zip) capa (*parque_sierra_nevada.shp*) que representa el espacio protegido de Sierra Nevada. 
   - Guardo la capa solo con los campos: *scientific, decimalLat, decimalLong, coord_x, coord_y*
   - Obtenemos [esta](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/datos_presencia_GBIF_23030_snev.zip) capa (*datos_presencia_GBIF_23030_snev.shp*)
 
