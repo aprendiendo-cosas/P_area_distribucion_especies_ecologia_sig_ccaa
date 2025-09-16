@@ -31,27 +31,58 @@ Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo
 
 - A la capa anterior se le aplican las siguientes consultas para obtener puntos de presencia de especies clave en distintos ecosistemas. Esto es lo que tendrían que hacer los estudiantes en sus casas. Quizás en la práctica de SIG pueden hacer un ejemplo. Yo les daré instrucciones sobre qué especies elegir para cada tipo de ecosistema.
 
-  - **Encina:**
+- **Encina (para estudiantes que trabajan con encinares):**
+
+  - Consulta: 
+
+  ```sql
+  "scientific" LIKE 'Quercus ilex%' OR "scientific" LIKE 'Quercus rotundifolia%'
+  ```
+
+  - Resultado: *[encina.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/encina.zip)*
+
+- **Pinus halepensis (para estudiantes que trabajan con pinares de repoblación):**
+
+  - Consulta: 
+
+  ```sql
+  "scientific" LIKE 'Pinus halepensis%'
+  ```
+
+  - Resultado: *[pinus_halepensis.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_halepensis.zip)*
+
+- **Pinus pinaster (para estudiantes que trabajan con pinares de repoblación) :**
 
     - Consulta: 
 
     ```sql
-    "scientific" LIKE 'Quercus ilex%' OR "scientific" LIKE 'Quercus rotundifolia%'
+    "scientific" LIKE 'Pinus pinaster%'
     ```
 
-    - Resultado: *[encina.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/encina.zip)*
+    - Resultado: *[pinus_pinaster.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_pinaster.zip)*
 
-  - **Pinos:**
+- **Pinus nigra (para estudiantes que trabajan con pinares de repoblación):**
 
     - Consulta: 
 
     ```sql
-    "scientific" LIKE 'Pinus%'
+    "scientific" LIKE 'Pinus nigra%'
     ```
 
-    - Resultado: *[pinus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus.zip)*
+    - Resultado: *[pinus_nigra.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_nigra.zip)*
 
-  - **Roble:**
+- **Pinus sylvestris (para estudiantes que trabajan con pinares de repoblación):**
+
+    - Consulta: 
+
+    ```sql
+    "scientific" LIKE 'Pinus sylvestris%'
+    ```
+
+    - Resultado: *[pinus_sylvestris.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_sylvestris.zip)*
+
+
+  - **Roble (para estudiantes que trabajan con robledales):**
 
     - Consulta: 
 
@@ -61,49 +92,93 @@ Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo
 
     - Resultado: *[roble.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/roble.zip)*
     
-  - **Romero:**
+  - **Romero (para estudiantes que trabajan con matorrales de media montaña):**
   
     - Consulta: 
-  
+    
     ```sql
       "scientific" LIKE 'Rosmarinus%' 
     ```
   
     - Resultado: *[romero.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/romero.zip)*
-  
-  - **Enebrales y piornales:**
+
+ - **Tomillos comunes (para estudiantes que trabajan con matorrales de media montaña):**
   
     - Consulta: 
-  
-    ```sql
-      "scientific" IS 'Juniperus hemisphaerica Jacq. & C.Presl' OR  "scientific" IS 'Juniperus communis subsp. nana (Willd.) Syme'  OR"scientific" IS  'Juniperus nana Willd.' OR  "scientific" LIKE  'Juniperus sabina%' OR  "scientific" LIKE  'Genista versicolor%' 
-    ```
-    - Resultado: *[enebrales.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/enebrales.zip)*
-  
     
+    ```sql
+      "scientific" LIKE 'Thymus mastichina%' OR "scientific" LIKE 'Thymus vulgaris%' OR "scientific" LIKE 'Thymus zygis%'
+    ```
   
-  - **Pastizales de alta montaña:**
+    - Resultado: *[thymus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/thymus.zip)*
+
+ - **Jaras (para estudiantes que trabajan con matorrales de media montaña):**
+  
+    - Consulta: 
+    
+    ```sql
+      "scientific" LIKE 'Cistus%'
+    ```
+  
+    - Resultado: *[cistus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/cistus.zip)*
+  
+  - **Enebros y sabinas de alta montaña (para estudiantes que trabajan con enebrales y piornales):**
+  
+    - Consulta: 
+    
+    ```sql
+      "scientific" IS 'Juniperus hemisphaerica Jacq. & C.Presl' OR  "scientific" IS 'Juniperus communis subsp. nana (Willd.) Syme'  OR"scientific" IS  'Juniperus nana Willd.' OR  "scientific" LIKE  'Juniperus sabina%'  
+    ```
+    - Resultado: *[juniperus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/juniperus.zip)*
+
+  - **Piornos de alta montaña (para estudiantes que trabajan con enebrales y piornales):**
+  
+    - Consulta: 
+    
+    ```sql
+      "scientific" LIKE  'Genista versicolor%' 
+    ```
+    - Resultado: *[genista.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/genista.zip)*
+    
+  - **Festucas de alta montaña (para estudiantes que trabajan con pastizales de alta montaña):**
   
     - Consulta: 
     ```sql
-    "scientific" IS  'Festuca glacialis Miégev.' OR  "scientific" LIKE  'Festuca      indigesta Boiss%' OR  "scientific" LIKE 'Agrostis%' OR  "scientific" LIKE 'Arenaria%' 
+    "scientific" IS  'Festuca glacialis Miégev.' OR  "scientific" LIKE  'Festuca      indigesta Boiss%'  
     ```
-    - Resultado: *[pastizales_alta_montania.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pastizales_alta_montania.zip)*
+    - Resultado: *[festuca.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/festuca.zip)*
+
+ - **Arenaria de alta montaña (para estudiantes que trabajan con pastizales de alta montaña):**
   
+    - Consulta: 
+    ```sql
+     "scientific" LIKE 'Arenaria pungens%' 
+    ```
+    - Resultado: *[arenaria.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/arenaria.zip)*
+
   
-  
-  
-    - **Chopos y sauces (Bosques de ribera):**
-  
+
+ - **Chopos  (para estudiantes que trabajan con bosques de ribera):**
+   
       - Consulta: 
         
       ```sql
-        "scientific" LIKE 'Populus%' OR  "scientific" LIKE 'Salix%'
+        "scientific" LIKE 'Populus%''
       ```
-  
-  
-      - Resultado: *[bosques_ribera.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/bosques_ribera.zip)*
-  
+   - Resultado: *[populus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/populus.zip)*
+
+ - **Sauces  (para estudiantes que trabajan con bosques de ribera):**
+   
+      - Consulta: 
+        
+      ```sql
+        "scientific" LIKE 'Salix%''
+      ```
+   - Resultado: *[salix.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/salix.zip)*
+
+
+
+
 
 
 
