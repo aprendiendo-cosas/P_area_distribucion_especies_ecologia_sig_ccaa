@@ -176,7 +176,14 @@ Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo
       ```
    - Resultado: *[salix.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/salix.zip)*
 
-
+ - **Cárices  (para estudiantes que trabajan con borreguiles):**
+   
+      - Consulta: 
+        
+      ```sql
+        "scientific" LIKE 'Carex%''
+      ```
+   - Resultado: *[salix.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/carex_nigra.zip)*
 
 
 
