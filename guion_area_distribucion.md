@@ -8,7 +8,7 @@
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
 > + **_Duración_**: Lo que haya durado esta sesión en la asignatura de SIG más una hora en casa 
 
-![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/tags/2025_2026/imagenes/portada.png)
+![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/heads/main/imagenes/portada.png)
 
 
 
@@ -70,7 +70,7 @@ El siguiente esquema muestra esta idea.
 
 
 
-![gradientes](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/tags/2025_2026/imagenes/gradientes_nicho.png)
+![gradientes](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/heads/main/imagenes/gradientes_nicho.png)
 
 En nuestro caso hemos trabajado por ahora tanto con la distribución de las especies concretas (en la práctica de SIG y en la de ecología sobre el mapa de biodiversidad) y también con la idea de distribución de tipos de ecosistemas. En este ejercicio combinaremos ambas ideas para entenderlo todo mejor. Generaremos un mapa que muestre por un lado la distribución de las especies dominantes de nuestro ecosistema y por otro la distribución de dicho ecosistema. 
 
@@ -84,7 +84,7 @@ A continuación se describen los pasos que hay que dar para generar mapas de dis
 
 ### 1. Cargar en QGIS los datos de presencia y consultar por especie
 
-+ **1.1** Descarga el archivo `csv` que contiene los datos de presencia de especies según GBIF. Lo tienes [aquí](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/tags/2025_2026/geoinfo/csv_gbif_sierra_nevada.zip). 
++ **1.1** Descarga el archivo `csv` que contiene los datos de presencia de especies según GBIF. Lo tienes [aquí](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/csv_gbif_sierra_nevada.zip). 
 
 + **1.2.** Como os enseñó Jorge, carga el archivo `csv` indicando que los campos `UTM_X`  y `UTM_Y` tienen las coordenadas de los puntos.
 
@@ -127,7 +127,7 @@ A continuación se describen los pasos que hay que dar para generar mapas de dis
 
 ### 2. Carga en QGIS el mapa de ecosistemas
 
-+ **2.1** En [este](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/tags/2025_2026/geoinfo/ecosistemas_snev_dissolve.zip) enlace puedes descargar el mapa de ecosistemas. 
++ **2.1** En [este](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/ecosistemas_snev_dissolve.zip) enlace puedes descargar el mapa de ecosistemas. 
 + **2.2** Una vez descargado, despliégalo en QGIS y ponle unos colores que te gusten y que permitan ver bien los puntos de presencia de las especies.
 
 
@@ -136,7 +136,7 @@ A continuación se describen los pasos que hay que dar para generar mapas de dis
 
 Si sigues correctamente los pasos anteriores, deberás obtener un mapa parecido al que se muestra a continuación. 
 
-![encina_encinar](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/tags/2025_2026/imagenes/encina_encinar.png)
+![encina_encinar](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/heads/main/imagenes/encina_encinar.png)
 
 Los puntos naranjas se corresponden con el área de distribución de la especie del ejemplo. Los polígonos verdes corresponden con el área de distribución del ecosistema en el que es dominante esta especie.
 
