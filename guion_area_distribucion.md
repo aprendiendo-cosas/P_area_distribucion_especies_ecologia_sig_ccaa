@@ -54,19 +54,27 @@ Además de incluir los mapas de las especies que te correspondan, deberás de in
 
 Los objetivos de aprendizaje anteriores se materializan en el siguiente objetivo operativo. Es decir, tienes que hacer esto:
 
+> Generar un mapa que muestre la distribución de las especies dominantes del ecosistema con el que estás trabajando y otro con la distribución de dicho ecosistema. 
+
 
 
 ## Contextualización ecológica: áreas de distribución de especies (nicho ecológico) y distribución de ecosistemas.
 
-Los ecosistemas terrestres están dominados por plantas. Ellas son las que suelen dar la forma y también el nombre a dichos ecosistemas. Un pinar, por ejemplo, es un bosque en el que dominan los pinos. Pero no todos los sitios en los que hay pinos son pinares. Puede haber pinos en mitad de un encinar y no pasa nada. Si en un lugar concreto hay muchos individuos de una especie, es porque en esa zona se dan las condiciones adecuadas para su supervivencia. Si en una zona hay pocos individuos de una especie, es porque las condiciones no son tan adecuadas. La combinación de todas las condiciones ambientales que determinan la presencia de especies en el territorio es lo que denominamos "nicho ecológico". La idoneidad del territorio para que en él vivan las distintas especies cambia de manera gradual al hacerlo las condiciones ambientales. El siguiente esquema lo muestra claramente. 
+Los ecosistemas terrestres están dominados por plantas. Ellas son las que suelen dar la forma y también el nombre a dichos ecosistemas. Un pinar, por ejemplo, es un bosque en el que dominan los pinos. Pero no todos los sitios en los que hay pinos son pinares. Puede haber pinos en mitad de un encinar y no pasa nada. Si en un lugar concreto hay muchos individuos de una especie, es porque en esa zona se dan las condiciones adecuadas para su supervivencia. Si en una zona hay pocos individuos de una especie, es porque las condiciones no son tan adecuadas. La combinación de todas las condiciones ambientales que determinan la presencia de especies en el territorio es lo que denominamos "nicho ecológico". La idoneidad del territorio para que en él vivan las distintas especies cambia de manera gradual al hacerlo las condiciones ambientales. 
+
+Los lugares en los que una especie es muy abundante son los que reciben un nombre que alude a dicha especie. Esta abstracción y generalización nos permite crear el concepto de "tipo de ecosistema". Así, un encinar, por ejemplo, es un lugar en el que hay muchas encinas. Esta abundancia de una o varias especies en concreto condiciona la estructura y también el funcionamiento del sistema en su conjunto.
+
+El siguiente esquema muestra esta idea.
+
+
 
 
 
 ![gradientes](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/heads/main/imagenes/gradientes_nicho.png)
 
-Los lugares en los que una especie es muy abundante son los que reciben un nombre que alude a dicha especie. 
+En nuestro caso hemos trabajado por ahora tanto con la distribución de las especies concretas (en la práctica de SIG y en la de ecología sobre el mapa de biodiversidad) y también con la idea de distribución de tipos de ecosistemas. En este ejercicio combinaremos ambas ideas para entenderlo todo mejor. Generaremos un mapa que muestre por un lado la distribución de las especies dominantes de nuestro ecosistema y por otro la distribución de dicho ecosistema. 
 
-
+La interpretación ecológica de los resultados obtenidos nos ayudará a entender mejor cómo se distribuyen las especies y los ecosistemas en Sierra Nevada. Así, por ejemplo, el mapa de distribución de ecosistemas se ha generado a partir de las zonas de máxima abundancia de las especies dominantes. Un lugar que esté fuera del área de distribución de un ecosistema, pero que tenga puntos de presencia de una especie de otro ecosistema se interpreta como que en esa zona pueden vivir pocos individuos de esa especie. Sin embargo, un polígono del mapa de ecosistemas que no tenga puntos de presencia de la especie dominante, sería interpretada como un error de muestreo. 
 
 
 
@@ -74,181 +82,63 @@ Los lugares en los que una especie es muy abundante son los que reciben un nombr
 
 A continuación se describen los pasos que hay que dar para generar mapas de distribución de las especies de interés. Describiré con menos detalle las cuestiones que ya habéis visto en la asignatura de SIG:
 
+### 1. Cargar en QGIS los datos de presencia y consultar por especie
+
++ **1.1** Descarga el archivo `csv` que contiene los datos de presencia de especies según GBIF. Lo tienes [aquí](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/csv_gbif_sierra_nevada.zip). 
+
++ **1.2.** Como os enseñó Jorge, carga el archivo `csv` indicando que los campos `UTM_X`  y `UTM_Y` tienen las coordenadas de los puntos.
+
++ **1.3** También como te enseñó Jorge, selecciona los puntos que tengan las distintas especies que son importantes en tu ecosistema. Una vez tengas hecha la selección, guarda los puntos en un fichero de formas de puntos asignándole un nombre característico de la especie. Si tu ecosistema tiene dos especies clave, por ejemplo, tendrás dos ficheros de formas (shapefiles) con los resultados de las consultas. A continuación tienes una lista con las especies que tendrás que caracterizar en función de cuál sea tu ecosistema:
+
+  - **Encinar**: Mapa de distribución de *Quercus ilex*. Recuerda que también tiene como sinónimo *Quercus rotundifolia*.
+
+  - **Pinares de repoblación:**
+
+    - Mapa de *Pinus halepensis*
+    - Mapa de *Pinus pinaster*
+    - Mapa de *Pinus nigra*
+
+    - Mapa de *Pinus sylvestris*
+
+  - **Robledales**: Mapa de distribución de *Quercus pyrenaica*
+
+  - **Matorrales mediterráneos**:
+    - Mapa de *Rosmarinus*
+    - Mapa de los tomillos más comunes (*Thymus mastichina, Thymus vulgaris* y *Thymus zygis*)
+    - Mapa de las jaras más comunes (*Cistus*)
+
+  - **Piornales y enebrales de alta montaña**:
+    - Mapa de *Juniperus hemisphaerica, Juniperus communis subsp. nana, Juniperus nana* y *Juniperus sabina*
+    - Mapa de *Genista versicolor*
+
+  - **Pastizales de alta montaña**:
+    - Mapa de *Arenaria pungens*
+
+  - **Bosques de ribera**:
+    - Mapa de *Populus*
+    - Mapa de *Salix*
+
+  - **Borreguiles**
+    - Mapa de *Carex nigra*
+
++ **1.4** Una vez que tengas los mapas de las especies que te interesan, despliega las capas en QGIS y ponles unos colores que te gusten.
+
+
+
+### 2. Carga en QGIS el mapa de ecosistemas
+
++ **2.1** En [este](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/ecosistemas_snev_dissolve.zip) enlace puedes descargar el mapa de ecosistemas. 
++ **2.2** Una vez descargado, despliégalo en QGIS y ponle unos colores que te gusten y que permitan ver bien los puntos de presencia de las especies.
+
+
+
+## Resultados esperados e interpretación ecológica
+
+Si sigues correctamente los pasos anteriores, deberás obtener un mapa parecido al que se muestra a continuación. 
 
 
 
 
-
-
-
-
-Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo que le resulte útil para su práctica.
-
-- Partimos de `csv_gbif_sierra_nevada.zip`  que contiene todos los datos de presencia de especies que hay en GBIF para un rectángulo que ocupa toda Sierra Nevada. 
-
-- Tras cargar el csv anterior en QGIS hacemos lo siguiente:
-
-  - Reproyecto la capa (que viene en WGS84) al EPSG 23030.
-  - Añado campos *coord_x* y *coord_y* con las coordenadas correspondientes en EPSG 20300. Uso la calculadora de campos con *$X* y *$Y*.
-  - Selecciono los puntos de GBIF que caen dentro de esta capa (*parque_sierra_nevada.shp*) que representa el espacio protegido de Sierra Nevada. 
-  - Guardo la capa solo con los campos: *scientific, decimalLat, decimalLong, coord_x, coord_y*
-  - Obtenemos `datos_presencia_GBIF_23030_snev.shp`
-
-- A la capa anterior se le aplican las siguientes consultas para obtener puntos de presencia de especies clave en distintos ecosistemas. Esto es lo que tendrían que hacer los estudiantes en sus casas. Quizás en la práctica de SIG pueden hacer un ejemplo. Yo les daré instrucciones sobre qué especies elegir para cada tipo de ecosistema.
-
-- **Encina (para estudiantes que trabajan con encinares):**
-
-  - Consulta: 
-
-  ```sql
-  "scientific" LIKE 'Quercus ilex%' OR "scientific" LIKE 'Quercus rotundifolia%'
-  ```
-
-  - Resultado: *[encina.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/encina.zip)*
-
-- **Pinus halepensis (para estudiantes que trabajan con pinares de repoblación):**
-
-  - Consulta: 
-
-  ```sql
-  "scientific" LIKE 'Pinus halepensis%'
-  ```
-
-  - Resultado: *[pinus_halepensis.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_halepensis.zip)*
-
-- **Pinus pinaster (para estudiantes que trabajan con pinares de repoblación) :**
-
-    - Consulta: 
-
-    ```sql
-    "scientific" LIKE 'Pinus pinaster%'
-    ```
-
-    - Resultado: *[pinus_pinaster.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_pinaster.zip)*
-
-- **Pinus nigra (para estudiantes que trabajan con pinares de repoblación):**
-
-    - Consulta: 
-
-    ```sql
-    "scientific" LIKE 'Pinus nigra%'
-    ```
-
-    - Resultado: *[pinus_nigra.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_nigra.zip)*
-
-- **Pinus sylvestris (para estudiantes que trabajan con pinares de repoblación):**
-
-    - Consulta: 
-
-    ```sql
-    "scientific" LIKE 'Pinus sylvestris%'
-    ```
-
-    - Resultado: *[pinus_sylvestris.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/pinus_sylvestris.zip)*
-
-
-  - **Roble (para estudiantes que trabajan con robledales):**
-
-    - Consulta: 
-
-    ```sql
-     "scientific" IS 'Quercus pyrenaica Willd.'
-    ```
-
-    - Resultado: *[roble.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/roble.zip)*
-    
-  - **Romero (para estudiantes que trabajan con matorrales de media montaña):**
-  
-    - Consulta: 
-    
-    ```sql
-      "scientific" LIKE 'Rosmarinus%' 
-    ```
-  
-    - Resultado: *[romero.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/romero.zip)*
-
- - **Tomillos comunes (para estudiantes que trabajan con matorrales de media montaña):**
-  
-    - Consulta: 
-    
-    ```sql
-      "scientific" LIKE 'Thymus mastichina%' OR "scientific" LIKE 'Thymus vulgaris%' OR "scientific" LIKE 'Thymus zygis%'
-    ```
-  
-    - Resultado: *[thymus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/thymus.zip)*
-
- - **Jaras (para estudiantes que trabajan con matorrales de media montaña):**
-  
-    - Consulta: 
-    
-    ```sql
-      "scientific" LIKE 'Cistus%'
-    ```
-  
-    - Resultado: *[cistus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/cistus.zip)*
-  
-  - **Enebros y sabinas de alta montaña (para estudiantes que trabajan con enebrales y piornales):**
-  
-    - Consulta: 
-    
-    ```sql
-      "scientific" IS 'Juniperus hemisphaerica Jacq. & C.Presl' OR  "scientific" IS 'Juniperus communis subsp. nana (Willd.) Syme'  OR"scientific" IS  'Juniperus nana Willd.' OR  "scientific" LIKE  'Juniperus sabina%'  
-    ```
-    - Resultado: *[juniperus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/juniperus.zip)*
-
-  - **Piornos de alta montaña (para estudiantes que trabajan con enebrales y piornales):**
-  
-    - Consulta: 
-    
-    ```sql
-      "scientific" LIKE  'Genista versicolor%' 
-    ```
-    - Resultado: *[genista.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/genista.zip)*
-    
-  - **Festucas de alta montaña (para estudiantes que trabajan con pastizales de alta montaña):**
-  
-    - Consulta: 
-    ```sql
-    "scientific" IS  'Festuca glacialis Miégev.' OR  "scientific" LIKE  'Festuca      indigesta Boiss%'  
-    ```
-    - Resultado: *[festuca.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/festuca.zip)*
-
- - **Arenaria de alta montaña (para estudiantes que trabajan con pastizales de alta montaña):**
-  
-    - Consulta: 
-    ```sql
-     "scientific" LIKE 'Arenaria pungens%' 
-    ```
-    - Resultado: *[arenaria.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/arenaria.zip)*
-
-  
-
- - **Chopos  (para estudiantes que trabajan con bosques de ribera):**
-   
-      - Consulta: 
-        
-      ```sql
-        "scientific" LIKE 'Populus%''
-      ```
-   - Resultado: *[populus.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/populus.zip)*
-
- - **Sauces  (para estudiantes que trabajan con bosques de ribera):**
-   
-      - Consulta: 
-        
-      ```sql
-        "scientific" LIKE 'Salix%''
-      ```
-   - Resultado: *[salix.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/salix.zip)*
-
- - **Cárices  (para estudiantes que trabajan con borreguiles):**
-   
-      - Consulta: 
-        
-      ```sql
-        "scientific" LIKE 'Carex%''
-      ```
-   - Resultado: *[salix.shp](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/carex_nigra.zip)*
 
 
 
