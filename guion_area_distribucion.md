@@ -6,9 +6,9 @@
 > + **_Versión_**: 2025-2026
 > + **_Asignatura (grado)_**: Ecología (CCAA)
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
-> + **_Duración_**: Dos sesiones de 2 horas cada una. Alguna hora más en casa. 
+> + **_Duración_**: Lo que haya durado esta sesión en la asignatura de SIG más una hora en casa 
 
-![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_estructura_pobs_ecologia_CCAA/refs/tags/2024-2025/imagenes/portada.png)
+![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/heads/main/imagenes/portada.png)
 
 
 
@@ -42,12 +42,15 @@ Además de incluir los mapas de las especies que te correspondan, deberás de in
 
 ## Objetivos
 
-- Aprender qué es GBIF. Curro o Jorge.
-- Representar una tabla en csv con coordenadas en QGIS. Jorge
-- Consultar la tabla de atributos del csv. Jorge.
-- Extraer shapefiles de puntos con la distribución de las especies clave de un ecosistema concreto. Jorge puede hacer algún ejemplo en clase. Los alumnos hacen esto para el ecosistema que tienen asignado.
-- Entender el concepto de área de distribución de especies. Curro.
-- Entender el concepto de distribución de ecosistemas. Curro.
+- Disciplinares para la asignatura de ecología:
+  - Familiarizarse con GBIF como infraestructura que provee datos a escala mundial sobre diversidad y distribución de especies. 
+  - Entender bien la diferencia entre área de distribución de una especie y distribución de un ecosistema en el que esa especie es dominante.
+
+- Competenciales: Relacionados con la adquisición de competencias genéricas (SIG y R en este caso):
+  - Entrenar la capacidad de representar datos georreferenciados en tablas `csv` usando QGIS.
+  - Consultar la tabla de atributos de dicha capa usando QGIS.
+  - Generar ficheros de formas (shapefile) de puntos con la distribución de las especies clave de un ecosistema concreto. 
+
 
 
 
