@@ -62,7 +62,9 @@ Los ecosistemas terrestres están dominados por plantas. Ellas son las que suele
 
 
 
+![gradientes](https://raw.githubusercontent.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/refs/heads/main/imagenes/gradientes_nicho.png)
 
+Los lugares en los que una especie es muy abundante son los que reciben un nombre que alude a dicha especie. 
 
 
 
