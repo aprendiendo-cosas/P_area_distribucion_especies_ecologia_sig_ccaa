@@ -1,6 +1,18 @@
 
 
-# Uso de información de [GBIF](https://www.gbif.org/) (Global Biodiversity Information Facility) para generar mapas de área de distribución de especies en Sierra Nevada
+# Uso de información de [GBIF](https://www.gbif.org/) para generar mapas de área de distribución de especies en Sierra Nevada
+
+> + **_Tipo de material_**: <span style="display: inline-block; font-size: 12px; color: white; background-color: #4caf50; border-radius: 5px; padding: 5px; font-weight: bold;"> Prácticas</span> 
+> + **_Versión_**: 2025-2026
+> + **_Asignatura (grado)_**: Ecología (CCAA)
+> + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
+> + **_Duración_**: Dos sesiones de 2 horas cada una. Alguna hora más en casa. 
+
+![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_estructura_pobs_ecologia_CCAA/refs/tags/2024-2025/imagenes/portada.png)
+
+
+
+
 
 
 
@@ -19,15 +31,15 @@
 
 Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo que le resulte útil para su práctica.
 
-- Partimos de [este](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/csv_gbif_sierra_nevada.zip) archivo csv que contiene todos los datos de presencia de especies que hay en GBIF para un rectángulo que ocupa toda Sierra Nevada. 
+- Partimos de `csv_gbif_sierra_nevada.zip`  que contiene todos los datos de presencia de especies que hay en GBIF para un rectángulo que ocupa toda Sierra Nevada. 
 
 - Tras cargar el csv anterior en QGIS hacemos lo siguiente:
 
   - Reproyecto la capa (que viene en WGS84) al EPSG 23030.
   - Añado campos *coord_x* y *coord_y* con las coordenadas correspondientes en EPSG 20300. Uso la calculadora de campos con *$X* y *$Y*.
-  - Selecciono los puntos de GBIF que caen dentro de [esta](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/parque_sierra_nevada.zip) capa (*parque_sierra_nevada.shp*) que representa el espacio protegido de Sierra Nevada. 
+  - Selecciono los puntos de GBIF que caen dentro de esta capa (*parque_sierra_nevada.shp*) que representa el espacio protegido de Sierra Nevada. 
   - Guardo la capa solo con los campos: *scientific, decimalLat, decimalLong, coord_x, coord_y*
-  - Obtenemos [esta](https://github.com/aprendiendo-cosas/P_area_distribucion_especies_ecologia_sig_ccaa/raw/refs/heads/main/geoinfo/datos_presencia_GBIF_23030_snev.zip) capa (*datos_presencia_GBIF_23030_snev.shp*)
+  - Obtenemos `datos_presencia_GBIF_23030_snev.shp`
 
 - A la capa anterior se le aplican las siguientes consultas para obtener puntos de presencia de especies clave en distintos ecosistemas. Esto es lo que tendrían que hacer los estudiantes en sus casas. Quizás en la práctica de SIG pueden hacer un ejemplo. Yo les daré instrucciones sobre qué especies elegir para cada tipo de ecosistema.
 
