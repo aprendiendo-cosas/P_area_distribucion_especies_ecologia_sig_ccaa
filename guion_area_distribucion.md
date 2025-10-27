@@ -12,34 +12,6 @@
 
 
 
-Concretamente, tendrás que incluir en este trabajo, mapas de distribución de las siguientes especies en función del ecosistema con el que estés trabajando:
-
-- **Encinar**: Mapa de distribución de *Quercus ilex*. Recuerda que también tiene como sinónimo *Quercus rotundifolia*.
-- **Pinares de repoblación:**
-  - Mapa de *Pinus halepensis*
-  - Mapa de *Pinus pinaster*
-  - Mapa de *Pinus nigra*
-  - Mapa de *Pinus sylvestris*
-- **Robledales**: Mapa de distribución de *Quercus pyrenaica*
-- **Matorrales mediterráneos**:
-  - Mapa de *Rosmarinus*
-  - Mapa de los tomillos más comunes (*Thymus mastichina, Thymus vulgaris* y *Thymus zygis*)
-  - Mapa de las jaras más comunes (*Cistus*)
-- **Piornales y enebrales de alta montaña**:
-  - Mapa de *Juniperus hemisphaerica, Juniperus communis subsp. nana, Juniperus nana* y *Juniperus sabina*
-  - Mapa de *Genista versicolor*
-- **Pastizales de alta montaña**:
-  - Mapa de *Arenaria pungens*
-- **Bosques de ribera**:
-  - Mapa de *Populus*
-  - Mapa de *Salix*
-- **Borreguiles**
-  - Mapa de *Carex nigra*
-
-Además de incluir los mapas de las especies que te correspondan, deberás de incluir en el documento una discusión ecológica sobre la distribución de las especies estudiadas. Analiza, por ejemplo, cómo se distribuyen en función del clima, la orientación, la geología o cualquier otra variable que consideres relevantes. 
-
-
-
 ## Objetivos
 
 - Disciplinares para la asignatura de ecología:
