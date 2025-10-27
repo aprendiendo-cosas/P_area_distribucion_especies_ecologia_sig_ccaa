@@ -52,9 +52,33 @@ Además de incluir los mapas de las especies que te correspondan, deberás de in
   - Generar ficheros de formas (shapefile) de puntos con la distribución de las especies clave de un ecosistema concreto. 
 
 
+Los objetivos de aprendizaje anteriores se materializan en el siguiente objetivo operativo. Es decir, tienes que hacer esto:
 
 
-## Pasos a dar
+
+## Contextualización ecológica: áreas de distribución de especies (nicho ecológico) y distribución de ecosistemas.
+
+Los ecosistemas terrestres están dominados por plantas. Ellas son las que suelen dar la forma y también el nombre a dichos ecosistemas. Un pinar, por ejemplo, es un bosque en el que dominan los pinos. Pero no todos los sitios en los que hay pinos son pinares. Puede haber pinos en mitad de un encinar y no pasa nada. Si en un lugar concreto hay muchos individuos de una especie, es porque en esa zona se dan las condiciones adecuadas para su supervivencia. Si en una zona hay pocos individuos de una especie, es porque las condiciones no son tan adecuadas. La combinación de todas las condiciones ambientales que determinan la presencia de especies en el territorio es lo que denominamos "nicho ecológico". La idoneidad del territorio para que en él vivan las distintas especies cambia de manera gradual al hacerlo las condiciones ambientales. El siguiente esquema lo muestra claramente. 
+
+
+
+
+
+
+
+
+
+## Flujo de trabajo
+
+A continuación se describen los pasos que hay que dar para generar mapas de distribución de las especies de interés. Describiré con menos detalle las cuestiones que ya habéis visto en la asignatura de SIG:
+
+
+
+
+
+
+
+
 
 Aquí describo lo que he hecho yo para preparar los datos. Jorge usa de aquí lo que le resulte útil para su práctica.
 
